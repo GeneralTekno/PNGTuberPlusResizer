@@ -1,0 +1,25 @@
+﻿<Window x:Class="PNGPlusResizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PNGPlusResizer"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        mc:Ignorable="d"
+        Title="PNGPlus Resizer" Height="250" Width="520">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="5">
+            <StackPanel Orientation="Horizontal" Height="30" HorizontalAlignment="Left" Margin="0,5">
+                <TextBlock Text="Filename:" Margin="0,0,30,0" FontSize="16" />
+                <TextBox FontSize="16" Width="280" x:Name="txtFilePath" Text="{Binding FilePath}" Margin="5,0" IsReadOnly="True" TextAlignment="Left"></TextBox>
+            <Button Width="105" x:Name="btnSelectFile" Click="btnSelectFile_MouseUp" IsEnabled="{Binding IsNotRunning}"  FontSize="16">Select file...</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Height="30" HorizontalAlignment="Left">
+                <TextBlock Text="Scale Percentage (0-100):" Width="395" FontSize="16"/>
+                <TextBox Text="{Binding PercentageValue}" x:Name="Text"  FontSize="16" Width="50" IsEnabled="{Binding IsNotRunning}"></TextBox>
+            </StackPanel>
+            <Button HorizontalAlignment="Right" IsEnabled="{Binding CanRunJob}" x:Name="btnRunJob" Click="RunJob_MouseUp"  FontSize="16" Margin="0,10"  Width="150" Height="30">Run!</Button>
+        </StackPanel>
+        <TextBlock Text="{Binding Progress}" TextAlignment="Right" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="5" Width="435"/>
+    </Grid>
+</Window>
