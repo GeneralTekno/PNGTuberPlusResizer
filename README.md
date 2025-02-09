@@ -7,14 +7,25 @@ Currently tested with PNGTuberPlus 1.4.5!
  
 I've noticed PNGTuberPlus chugs hard when it first loads up if you have overly large pngtuber models in there, especially models as complicated as the ones Sono rigs. And it's probably not necessary massive 5000px models for streaming purposes (I've found 2000px looks perfectly fine plus allows you to zoom in a reasonable amount when need be). Loading a model that large, I kid you not, consumed 7GB of ram on my machine (vs around 1.1GB with a 40% scale downscaled model). While the ram usage does go down overtime, I've noticed, that's still an INSANE amount for what's a bunch of images with physics transformers on them.
 
-WHAT THIS ADJUSTS FOR RESIZING:
+## WHAT THIS ADJUSTS FOR RESIZING:
+
 - Image file sizes (re-exports them all using the data in the save file)
 - Embedded image file sizes
 - Amplitudes (X/Y)
 - Position coordinates
 - Offset coordinates
 
-How to use:
+##  How to Install:
+
+> [!note]
+> To run the program, you need to install [.NET](https://dotnet.microsoft.com/ja-jp/download/dotnet) beforehand.
+
+1. Download `PNGPTubePlusReizer.zip` from the release page:<br>https://github.com/GeneralTekno/PNGTuberPlusResizer/releases
+2. Extract the ZIP file.
+3. Launch the `.exe` file (e.g., `PNGTUBER PLUS x.x.x WINDOWS.exe`).
+
+## How to use:
+
 1. Select a model file.
 2. Select a scale percentage
 3. Select a folder to export the new file to.
